@@ -142,14 +142,14 @@ end
 
 # accepts board and returns turn method until over method is true, puts output depending on whether there is a winner or it is a draw
 def play(board)
-  turn(board)
-  until over?(board) == true
+  until over?(board)
+    current_player(board)
     turn(board)
   end
 
-  if won?(board) == true
+  if won?(board)
     puts "Congratulations #{winner(board)}!"
-  elsif draw?(board) == true
+  elsif draw?(board)
     puts "Cat's Game!"
   end
 end
