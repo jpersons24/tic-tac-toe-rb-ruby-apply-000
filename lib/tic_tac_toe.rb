@@ -70,11 +70,11 @@ def turn(board)
   puts "Please enter 1-9:" # ask for input
   user_input = gets.strip # get input
   index = input_to_index(user_input) # convert input to index
-  if valid_move?(board, index) == true # pass valid_move the board and index as arguments to check if it is true
+  if valid_move?(board, index) ## == true # pass valid_move the board and index as arguments to check if it is true
     move(board, index, current_player(board)) # if valid_move is true envoke move method
     display_board(board) # if valid_move is true envoke display board method
   else
-    until valid_move?(board, index) == true # pass valid_move the board and index as arguments to check if it is true
+    until valid_move?(board, index) ## == true # pass valid_move the board and index as arguments to check if it is true
       puts "Please enter 1-9:" # ask for input
       user_input = gets.strip # get input
       index = input_to_index(user_input) # convert input to index
